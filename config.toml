@@ -1,5 +1,4 @@
-#baseURL = "https://blog.thomaspaulin.me"
-baseURL = "https://nifty-ride-37e994.netlify.com/"
+baseURL = "https://blog.thomaspaulin.me"
 languageCode = "en-us"
 title = "blog.thomaspaulin.me"
 description = "A thing"
