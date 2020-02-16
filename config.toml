@@ -1,0 +1,21 @@
+baseURL = "https://blog.thomaspaulin.me"
+languageCode = "en-us"
+title = "blog.thomaspaulin.me"
+description = "A thing"
+theme = "candy"
+
+[params]
+  AuthorName = "Thomas Paulin"
+  description = "A thing"
+
+[[menu.main]]
+  name = "Articles"
+  identifier = "Articles"
+  url = "/articles/"
+  weight = 1
+
+[[menu.main]]
+  name = "Wiki"
+  identifier = "Wiki"
+  url = "https://wiki.thomaspaulin.me/"
+  weight = 2
