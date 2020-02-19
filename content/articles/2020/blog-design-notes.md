@@ -18,6 +18,7 @@ I want a very minimal design which displays the bare minimum information in a cr
 [Possibility #1](https://coolors.co/1c1c1c-7c7a7a-fcf7f8-ffffff-ff5d73), [Possibility #2](https://coolors.co/cfdbd5-e8eddf-f5cb5c-242423-333533), [Possibility #3](https://coolors.co/b3efb2-edf1f2-f5cb5c-242423-333533), [Possibility #4](https://colorhunt.co/palette/166073).
 These all take the approach of a bright colour on a white background for the vibrance and friendliness that brings.
 
+{{< figure src="img/blog-design-colour-palette.png" alt="the final colour scheme was reminiscent of Luxembourg's flag with a dash of dark grey and black" >}}
 The [end result](https://coolors.co/7c7a7a-1c1c1c-ffffff-b91400-01baef) was reminiscent of Luxembourg's flag with some dark grey and black thrown in.
 
 I really liked the warmness and positivity of a yellow based theme, however the contrast was insufficient for readability and accessibility purposes. In order to create adequate contrast between the link text and the background a darker primary colour, the rest you are seeing, was chosen. The blue then followed as an accent because of the complementary nature. 
