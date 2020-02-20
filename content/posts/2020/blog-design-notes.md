@@ -25,7 +25,7 @@ I really liked the warmness and positivity of a yellow based theme, however the 
 
 I am considering a night mode theme because the black/grey background provides suffieint contrast with the bright colours. However, that doesn't fit with the frosted glass aesthetic I am ultimately going for in the end.
 
-For some guidelines I tried to adhere to, see [Wix](https://www.wix.com/blog/2017/10/how-to-choose-the-perfect-color-palette-for-your-business), [Invision App](https://www.invisionapp.com/inside-design/quick-guide-color-palette/), and [Website Builder Expert](https://www.websitebuilderexpert.com/designing-websites/how-to-choose-color-for-your-website/)'s articles on building a colour palette for a website.
+For some guidelines I tried to adhere to, see [Wix](https://www.wix.com/blog/2017/10/how-to-choose-the-perfect-color-palette-for-your-business), [Invision App](https://www.invisionapp.com/inside-design/quick-guide-color-palette/), and [Website Builder Expert](https://www.websitebuilderexpert.com/designing-websites/how-to-choose-color-for-your-website/)'s posts on building a colour palette for a website.
 
 ## Fonts
 ### Criteria
@@ -51,15 +51,15 @@ With will fall back to the generic sans-serif, and serif font families, respecti
 ### Blog Home Page
 Because I'm a fan of pictures speaking for 1000 words, I want the article summaries to have a title, image, date, and initial article text. This will lead to an image heavy page, and thus users will follow the Z pattern when it comes to browsing.
 
-- Primary use case: Reading articles
-- Secondary use case: Searching for desired articles
+- Primary use case: Reading posts
+- Secondary use case: Searching for desired posts
 - Third use case: Navigating to my other sites/wiki
 
-Personal website can be a game style main menu, but the blog will be a Quantum Break inspired blog site with the home page displaying the latest articles.
+Personal website can be a game style main menu, but the blog will be a Quantum Break inspired blog site with the home page displaying the latest posts.
 
 On each page of the blog site will be an icon to return home on the left, and an icon to perform a global search of the blog on the right, alongside the hamburger menu.
 
-Items on the blog home pages will include pictures and will be laid out as list because blog articles are not disparate items.
+Items on the blog home pages will include pictures and will be laid out as list because blog posts are not disparate items.
 
 Each list item will include a picture/thumbnail, title, preview text, and date as above.
 
