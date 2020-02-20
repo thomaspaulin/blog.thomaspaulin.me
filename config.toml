@@ -9,7 +9,7 @@ theme = "candy"
   description = "A thing"
 
 [permalinks]
-  posts = "/:year/:month/:title/"
+  posts = "/:year/:month/:slug/"
 
 [[menu.main]]
   name = "Posts"
