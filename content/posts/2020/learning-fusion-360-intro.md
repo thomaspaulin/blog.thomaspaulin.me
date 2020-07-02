@@ -2,7 +2,7 @@
 title: "Learning Fusion 360 in 30 Days - Introduction"
 date: 2020-06-22
 tags: ["cad", "fusion-360", "autodesk", "challenges", "30-day-challenges", "fusion-360-in-30"]
-draft: true
+draft: false
 ---
 
 # Motivation
