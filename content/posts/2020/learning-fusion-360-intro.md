@@ -23,4 +23,4 @@ His projects are also real-world objects relevant to hobbyists or makers. This i
 # Daily Logs
 This section containts links to each daily log entry and will therefore evolve as the challenge progresses. Check back for updates.
 
-1. {{< ref "learning-fusion-360-day-1.md" >}}
+1. [Day 1 - Lego Brick]({{< ref "learning-fusion-360-day-1.md" >}})
