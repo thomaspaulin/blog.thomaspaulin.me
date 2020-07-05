@@ -5,8 +5,10 @@ tags: ["cad", "fusion-360", "autodesk", "challenges", "30-day-challenge", "fusio
 draft: true
 ---
 ### Project
+Dog bowl
 
 ### Lessons Learned
+- If you don't know the exact measurements of something, when using a reference image you can extend them and let the intersections be calculated by Fusion automatically
 
 ### Completed Project
-
+[Dog bowl](https://a360.co/2VO2UeU)
