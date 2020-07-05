@@ -38,6 +38,3 @@ This section containts links to each daily log entry and will therefore evolve a
 - [Day 13 - Bodies vs components]({{< ref "learning-fusion-360-day-13.md" >}})
 - [Day 14 - Flat head screwdriver]({{< ref "learning-fusion-360-day-14.md" >}})
 - [Day 15 - Painter's tripod]({{< ref "learning-fusion-360-day-15.md" >}})
-- [Day 16 - Sketch constraints]({{< ref "learning-fusion-360-day-16.md" >}})
-- [Day 17 - Fully constraining sketches]({{< ref "learning-fusion-360-day-17.md" >}})
-- [Day 18 - Converting a STL mesh to a solid body]({{< ref "learning-fusion-360-day-18.md" >}})
