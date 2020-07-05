@@ -5,8 +5,11 @@ tags: ["cad", "fusion-360", "autodesk", "challenges", "30-day-challenge", "fusio
 draft: true
 ---
 ### Project
+Auger bit
 
 ### Lessons Learned
+- Fusion 360 has no helix built in by default
+- You can use project to draw things and then turn them into surfaces
 
 ### Completed Project
-
+[Auger bit](https://a360.co/3gxuwNd)
