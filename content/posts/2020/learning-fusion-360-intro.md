@@ -23,4 +23,21 @@ His projects are also real-world objects relevant to hobbyists or makers. This i
 # Daily Logs
 This section containts links to each daily log entry and will therefore evolve as the challenge progresses. Check back for updates.
 
-- [Day 1 - Lego Brick]({{< ref "learning-fusion-360-day-1.md" >}})
+- [Day 1 - Lego brick]({{< ref "learning-fusion-360-day-1.md" >}})
+- [Day 2 - Beer bottle]({{< ref "learning-fusion-360-day-2.md" >}})
+- [Day 3 - Paper clip]({{< ref "learning-fusion-360-day-3.md" >}})
+- [Day 4 - Whisky bottle]({{< ref "learning-fusion-360-day-4.md" >}})
+- [Day 5 - Ice cube tray]({{< ref "learning-fusion-360-day-5.md" >}})
+- [Day 6 - Hex nut]({{< ref "learning-fusion-360-day-6.md" >}})
+- [Day 7 - Bike handle bar grip]({{< ref "learning-fusion-360-day-7.md" >}})
+- [Day 8 - Door stop]({{< ref "learning-fusion-360-day-8.md" >}})
+- [Day 9 - LED light bulb]({{< ref "learning-fusion-360-day-9.md" >}})
+- [Day 10 - Phone case]({{< ref "learning-fusion-360-day-10.md" >}})
+- [Day 11 - Dog bowl]({{< ref "learning-fusion-360-day-11.md" >}})
+- [Day 12 - Auger bit]({{< ref "learning-fusion-360-day-12.md" >}})
+- [Day 13 - Bodies vs components]({{< ref "learning-fusion-360-day-13.md" >}})
+- [Day 14 - Flat head screwdriver]({{< ref "learning-fusion-360-day-14.md" >}})
+- [Day 15 - Painter's tripod]({{< ref "learning-fusion-360-day-15.md" >}})
+- [Day 16 - Sketch constraints]({{< ref "learning-fusion-360-day-16.md" >}})
+- [Day 17 - Fully constraining sketches]({{< ref "learning-fusion-360-day-17.md" >}})
+- [Day 18 - Converting a STL mesh to a solid body]({{< ref "learning-fusion-360-day-18.md" >}})
