@@ -5,8 +5,10 @@ tags: ["cad", "fusion-360", "autodesk", "challenges", "30-day-challenge", "fusio
 draft: true
 ---
 ### Project
+LED Light bulb
 
 ### Lessons Learned
+- Note of note. Built on lessons from previous day
 
 ### Completed Project
-
+[Light bulb](https://a360.co/2O9PpSR)
