@@ -5,8 +5,14 @@ tags: ["cad", "fusion-360", "autodesk", "challenges", "30-day-challenge", "fusio
 draft: true
 ---
 ### Project
+Two part mold
 
 ### Lessons Learned
+- Combine tool to subtract bodies
+- Molding registration pins
+- Remember to capture design history when importing so history will be tracked
+- Target body when combining is the one who is affected. Cut away in this case
+- Can always cut your moulds into smaller pieces but then you risk more lines in the final product where the mold blocks meet
 
 ### Completed Project
-
+[Doughnut mold](https://a360.co/2VTGd9p)
