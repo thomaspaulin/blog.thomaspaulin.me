@@ -13,7 +13,7 @@ Scuplting an earbud
 - Double clicking an edge selects all edges in that path around the object e.g., to form a ring in many cases
 - Window select from a top-left to bottom-right direction (orange) selects only entities which are wholly in the selection box, window selection from bottom-right to top-left (green) selects everything the selection box comes in contact with
 - Edit form is the main operation that you'll be using
-- Using alt or option key when in edit form mode tells Fusion 360 you want to edit only those faces and therefore it will create new faces to allow your faces to be edited, while the others are left alone
+- Using alt or option key when in edit form mode tells Fusion 360 you want to edit only those faces so it will create new faces to allow your faces to be edited, whilst leaving the others alone
 - Crease operation creates a sharp edge, a crease, between faces
 
 ### Completed Project
