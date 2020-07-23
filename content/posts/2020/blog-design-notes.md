@@ -23,7 +23,7 @@ The [end result](https://coolors.co/7c7a7a-1c1c1c-ffffff-b91400-01baef) was remi
 
 I really liked the warmness and positivity of a yellow based theme, however the contrast was insufficient for readability and accessibility purposes. In order to create adequate contrast between the link text and the background a darker primary colour, the rest you are seeing, was chosen. The blue then followed as an accent because of the complementary nature. 
 
-I am considering a night mode theme because the black/grey background provides suffieint contrast with the bright colours. However, that doesn't fit with the frosted glass aesthetic I am ultimately going for in the end.
+I am considering a night mode theme because the black/grey background provides sufficient contrast with the bright colours. However, that doesn't fit with the frosted glass aesthetic I am ultimately going for in the end.
 
 For some guidelines I tried to adhere to, see [Wix](https://www.wix.com/blog/2017/10/how-to-choose-the-perfect-color-palette-for-your-business), [Invision App](https://www.invisionapp.com/inside-design/quick-guide-color-palette/), and [Website Builder Expert](https://www.websitebuilderexpert.com/designing-websites/how-to-choose-color-for-your-website/)'s posts on building a colour palette for a website.
 
@@ -33,7 +33,7 @@ For some guidelines I tried to adhere to, see [Wix](https://www.wix.com/blog/201
     - Avoid unnecessary elements, only provide exactly what is needed
 2. A range of weights for different emphasis
     - Shouldn't feel too oppressive
-3. There should be sufficnet space between letters to feel more friendly
+3. There should be sufficient space between letters to feel more friendly
 
 #### Possible Parings
 1. [Montserrat](https://fonts.google.com/specimen/Montserrat) (headings), [Esteban](https://www.dafontfree.io/esteban-font/) (body/article text)
