@@ -1,24 +1,30 @@
 baseURL = "https://blog.thomaspaulin.me"
-languageCode = "en-us"
+languageCode = "en-nz"
 title = "blog.thomaspaulin.me"
-description = "A thing"
-theme = "candy"
+description = "The writings of Thomas Paulin, a software engineer and aspiring polymath."
+theme = "tpnz"
 
 [params]
   AuthorName = "Thomas Paulin"
-  description = "A thing"
+  description = "The writings of Thomas Paulin, a software engineer and aspiring polymath."
 
 [permalinks]
   posts = "/:year/:month/:slug/"
 
 [[menu.main]]
+  name = "Main Page"
+  identifier = "Home"
+  url = "https://thomaspaulin.me/"
+  weight = 1
+
+[[menu.main]]
   name = "Posts"
   identifier = "Posts"
   url = "/posts/"
-  weight = 1
+  weight = 2
 
 [[menu.main]]
   name = "Wiki"
   identifier = "Wiki"
   url = "https://wiki.thomaspaulin.me/"
-  weight = 2
+  weight = 3
