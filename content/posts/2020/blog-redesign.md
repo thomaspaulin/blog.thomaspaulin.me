@@ -1,8 +1,8 @@
 ---
 title: "Redesigning thomaspaulin.me"
-date: 2020-08-11
+date: 2020-08-05
 tags: ["blog", "design", "hugo", "themes", "typography"]
-draft: true
+draft: false
 ---
 A personal website should say who you are and much like in a conversation, as personal website is so much more than the text written. My [initial design](https://blog.thomaspaulin.me/2020/02/designing-blog.thomaspaulin.me/) was made to be minimal but has ended up feeling bland and sterile, not reflecting my being at all, nor even the clean minimal look I was hoping for in my head. It is for these reasons that I've chosen to undertake a redesign of my personal website to make it a bit more memorable and whilst unifying the desing of the home page, and the blog.
 
