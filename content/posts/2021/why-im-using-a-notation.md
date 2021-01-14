@@ -1,6 +1,6 @@
 ---
 title: "Why I'm Using (a) Notation"
-date: 2021-01-13
+date: 2021-01-14
 tags: ["blog", "archiving links"]
 draft: true
 ---
