@@ -2,7 +2,7 @@
 title: "Why I'm Using (a) Notation"
 date: 2021-01-14
 tags: ["blog", "archiving links"]
-draft: true
+draft: false
 ---
 As anyone who has spent time reading old blogs knows it's merely a matter of time before a link breaks.
 
