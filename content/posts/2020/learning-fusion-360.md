@@ -13,7 +13,7 @@ In order to begin learning Fusion 360 I've decided to take Kevin Kennedy's Learn
 
 ### Why a 30 day challenge? 
 Small, consistent progress greatly helps with progression and learning and without obvious stepping stones I have a tendency to aim for overly ambitious projects which are unobtainable by a complete beginner in a reason timespan, thus wasting a significant amount of time and becoming demotivated as explained on the diagram below of challenge vs. ability.
-{{ figure src="img/challenge-vs-ability.jpg" alt="Challenge vs. Ability" }}
+{{< figure src="img/challenge-vs-ability.jpg" alt="Challenge vs. Ability" >}}
 
 ### Why this course? 
 Kevin comes with many recommendations, prompting me to watch one of his [beginner friendly videos](https://www.youtube.com/watch?v=qvrHuaHhqHI).
