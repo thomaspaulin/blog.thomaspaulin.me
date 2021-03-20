@@ -36,7 +36,7 @@ Your `app.js` file should look something like this:
 
 {{< gist thomaspaulin 3d6961d8090d592eb28d20fae7cbb63d >}}
 
-Now we have a wall to set the props from a callback we can fetch flight information from the OpenSky Network API. As a demonstration project, we only care about the latest information for all flights. Thus, we will get network's entire state vector set, without authenticating. This means our request is: `GET https://opensky-network.org/api/states/all`.
+Now we have a way to set the props from a callback we can fetch flight information from the OpenSky Network API. As a demonstration project, we only care about the latest information for all flights. Thus, we will get network's entire state vector set, without authenticating. This means our request is: `GET https://opensky-network.org/api/states/all`.
 
 The response we receive is not in the format [deck.gl](http://deck.gl) expects, and so we'll need to transform it. Fortunately, the OpenSky Network API response is easy to handle meaning a simple mapping function is sufficient. 
 
