@@ -1,8 +1,8 @@
 ---
 title: "What Is Your Technical Test Actually For?"
-date: 2021-03-20
+date: 2021-03-21
 tags: ["recruitment", "software engineering"]
-draft: true
+draft: false
 ---
 A recent discussion with a senior engineer on my team prompted me to think about the technical tests used when recruiting new (software) engineers.
 
