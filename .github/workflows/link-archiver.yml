@@ -1,0 +1,37 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Link Archiver
+# Finds external links by scanning the diffed Markdown files.
+# When external links are found they are sent to an API running on a machine hosting ArchiveBox.
+# That machine will then add those links to ArchiveBox.
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  pull_request:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  archive_external_pages:
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - uses: jitterbit/get-changed-files@v1
+        id: diff
+        with:
+          format: 'csv'
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Find links
+        uses: thomaspaulin/markdown-link-finder@master # todo make it
+        id: link-finder
+        with:
+          files: ${{ steps.diff.outputs.added_modified }}
+#      - name: Submit to ArchiveBox
+#        env:
+#          LINKS: ${{ steps.link-finder.outputs.links }}
+#          ARCHIVE_BOX_HOST: ${{ secrets.ARCHIVE_BOX_HOST }}
+#        run: |
+#          curl -H 'Content-Type: application/json' -d "$LINKS" "$ARCHIVE_BOX_HOST/link-archiver" #todo check curl syntax and endpoint
