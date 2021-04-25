@@ -29,9 +29,9 @@ jobs:
         id: link-finder
         with:
           files: ${{ steps.diff.outputs.added_modified }}
-#      - name: Submit to ArchiveBox
-#        env:
-#          LINKS: ${{ steps.link-finder.outputs.links }}
-#          ARCHIVE_BOX_HOST: ${{ secrets.ARCHIVE_BOX_HOST }}
-#        run: |
-#          curl -H 'Content-Type: application/json' -d "$LINKS" "$ARCHIVE_BOX_HOST/link-archiver" #todo check curl syntax and endpoint
+      - name: Submit to ArchiveBox
+        env:
+          LINKS: ${{ steps.link-finder.outputs.links }}
+          ARCHIVE_BOX_HOST: ${{ secrets.ARCHIVE_BOX_HOST }}
+        run: |
+          curl -H 'Content-Type: application/json' -d "$LINKS" "$ARCHIVE_BOX_HOST/archive-links"
