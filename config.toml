@@ -2,7 +2,7 @@ baseURL = "https://blog.thomaspaulin.me"
 languageCode = "en-nz"
 title = "blog.thomaspaulin.me"
 description = "The writings of Thomas Paulin, a software engineer and aspiring polymath."
-theme = "tpnz"
+theme = "candy"
 
 [params]
   AuthorName = "Thomas Paulin"
