@@ -12,13 +12,14 @@ fi
 
 password="$1"
 url="$2"
+archive_box_host="http://49.12.106.214:8000"
 
-csrf_token_field=$(curl -s -c cookies.txt http://49.12.106.214:8000/admin/login/?next=/admin/ | grep -o "name=['\"]csrfmiddlewaretoken['\"] value=['\"][^'\"]*" | sed -e 's/name="//' -e 's/\" value=\"/=/' -e 's/\"$//')
+csrf_token_field=$(curl -s -c cookies.txt "$archive_box_host/admin/login/?next=/admin/" | grep -o "name=['\"]csrfmiddlewaretoken['\"] value=['\"][^'\"]*" | sed -e 's/name="//' -e 's/\" value=\"/=/' -e 's/\"$//')
 data="$csrf_token_field&username=archivebox&password=$password"
 curl -v -b cookies.txt -c cookies.txt \
 	--data "$data" \
 	-H 'Content-Type: application/x-www-form-urlencoded' \
-	http://49.12.106.214:8000/admin/login/?next=/admin/
+	"$archive_box_host/admin/login/?next=/admin/"
 
 # there's a new CSRF token set when calling the add page. Parse that one from the cookies.txt file
 new_csrf_token=$( cat cookies.txt | grep "csrftoken" | awk '{ print $7 }')
@@ -27,6 +28,6 @@ curl -v -b cookies.txt -c cookies.txt \
 	-H 'Content-Type: application/x-www-form-urlencoded' \
 	--data-urlencode "url=$url" \
 	--data "$add_data" \
-	http://49.12.106.214:8000/add/
+	"$archive_box_host/add/"
 
 
