@@ -12,7 +12,7 @@ theme = "tpnz"
   posts = "/:year/:month/:slug/"
 
 [[menu.main]]
-  name = "Main Page"
+  name = "Home"
   identifier = "Home"
   url = "https://thomaspaulin.me/"
   weight = 1
