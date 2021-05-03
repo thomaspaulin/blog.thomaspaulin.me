@@ -1,18 +1,18 @@
 baseURL = "https://blog.thomaspaulin.me"
 languageCode = "en-nz"
 title = "blog.thomaspaulin.me"
-description = "The writings of Thomas Paulin, a software engineer and aspiring polymath."
-theme = "tpnz"
+description = "The intersection of aerospace, science, and programming."
+theme = "candy"
 
 [params]
   AuthorName = "Thomas Paulin"
-  description = "The writings of Thomas Paulin, a software engineer and aspiring polymath."
+  description = "The intersection of aerospace, science, and programming."
 
 [permalinks]
   posts = "/:year/:month/:slug/"
 
 [[menu.main]]
-  name = "Main Page"
+  name = "Home"
   identifier = "Home"
   url = "https://thomaspaulin.me/"
   weight = 1

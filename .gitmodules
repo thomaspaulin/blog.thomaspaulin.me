@@ -1,3 +1,15 @@
 [submodule "themes/candy"]
 	path = themes/candy
-	url = https://github.com/thomaspaulin/candy/
+	url = https://github.com/thomaspaulin/candy.git
+[submodule "infrastructure/content-archiving/archive-box-bridge"]
+	path = infrastructure/content-archiving/archive-box-bridge
+	url = https://github.com/thomaspaulin/archive-box-bridge.git
+[submodule "infrastructure/content-archiving/markdown-link-finder-action"]
+	path = infrastructure/content-archiving/markdown-link-finder-action
+	url = https://github.com/thomaspaulin/markdown-link-finder.git
+[submodule "infrastructure/content-archiving/blog-link-checker"]
+	path = infrastructure/content-archiving/blog-link-checker
+	url = https://github.com/thomaspaulin/blog-link-checker.git
+[submodule "infrastructure/content-archiving/archivebox"]
+	path = infrastructure/content-archiving/archivebox
+	url = https://github.com/ArchiveBox/ArchiveBox.git
