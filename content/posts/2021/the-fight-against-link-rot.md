@@ -1,6 +1,7 @@
 ---
 title: "The Fight Against Link Rot"
 date: 2021-05-05
+description: "The accumulation of links leading to dead or broken websites is rife throughout the internet and harms reader experience. I've designed a system to combat this link rot through a series of scripts and more. This post details the components, their reasons for existence, and why I made the choices I did."
 tags: ["blog", "archiving links"]
 draft: true
 ---
