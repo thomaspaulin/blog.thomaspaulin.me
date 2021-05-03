@@ -78,11 +78,7 @@ One important factor to consider here is that the archived page used must be the
 
 # The Components
 
-```
-TODO DIAGRAM HERE
-```
-
-Sequence diagram of my link archiving process
+{{< figure src="img/2021/archiving/link-archiving.svg title="Components in the link archiving process" >}}
 
 ## Blog
 
@@ -90,9 +86,7 @@ Publishing an article involves creating a pull request. On this pull request, th
 
 ## Archiver Script
 
-```jsx
-TODO DIAGRAM HERE
-```
+{{< figure src="img/posts/2021/archiving/archiver-script.svg" title="The archiver script flow" >}}
 
 As part of this pull request, the [GitHub Actions](https://docs.github.com/en/actions/quickstart) Runner executes a workflow. [This workflow](https://github.com/thomaspaulin/blog.thomaspaulin.me/blob/master/.github/workflows/link-archiver.yml) uses an [Action I have created](https://github.com/thomaspaulin/markdown-link-finder/releases/tag/v1) to scan the modified and added markdown files. This scan looks for any [links](https://www.markdownguide.org/basic-syntax#links) present, checks they are valid, and then it submits any links it finds to the Link Archive.
 
@@ -116,9 +110,7 @@ All these factors led me to rent a [Virtual Private Server (VPS)](https://en.wik
 
 ### Software Used
 
-```jsx
-TODO DIAGRAM HERE
-```
+{{< figure src="img/posts/2021/archiving/nginx-and-bridge.svg" title="Nginx and Archive Box bridge setup" >}}
 
 I chose [Archive Box](https://archivebox.io/) as my archiving software. It bundles SingleFile for downloading entire pages. It also uploads to [[Archive.org](http://archive.org)](https://www.archive.org) to assist with the global digital archiving effort. Should I make changes and include uBlock Origin in the future, by using Archive Box others will also have access to those changes. It seems fair given I receive such features from those who came before.
 
@@ -155,9 +147,7 @@ The process itself goes something like this:
 5. Update the post's Markdown with the new identifier
 6. Create a pull request with the changes and merge it to master
 
-```
-TODO DIAGRAM HERE
-```
+{{< figure src="img/posts/2021/archiving/link-fixing-process.svg" title="Link fixing process" >}}
 
 ### Why S3?
 
