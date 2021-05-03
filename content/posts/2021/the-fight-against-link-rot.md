@@ -1,9 +1,9 @@
 ---
 title: "The Fight Against Link Rot"
-date: 2021-05-03
+date: 2021-05-04
 description: "The accumulation of links leading to dead or broken websites is rife throughout the internet and harms reader experience. I've designed a system to combat this link rot through a series of scripts and more. This post details the components, their reasons for existence, and why I made the choices I did."
 tags: ["blog", "archiving links"]
-draft: true
+draft: false
 ---
     
 Link rot is the term given to the decay of [hyperlinks](https://www.computerhope.com/jargon/h/hyperlink.htm): The accumulation of links leading to broken or dead websites. Link rot a pet peeve of mine and [happens with alarming frequency](https://harvardlawreview.org/2014/03/perma-scoping-and-addressing-the-problem-of-link-and-reference-rot-in-legal-citations/). When surfing the internet I am expecting any link I encounter to work. Link rot shatters these expectations and can make reading frustrating.
