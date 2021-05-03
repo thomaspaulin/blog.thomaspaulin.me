@@ -1,6 +1,6 @@
 ---
 title: "The Fight Against Link Rot"
-date: 2021-05-05
+date: 2021-05-04
 description: "The accumulation of links leading to dead or broken websites is rife throughout the internet and harms reader experience. I've designed a system to combat this link rot through a series of scripts and more. This post details the components, their reasons for existence, and why I made the choices I did."
 tags: ["blog", "archiving links"]
 draft: true
@@ -8,7 +8,7 @@ draft: true
     
 Link rot is the term given to the decay of [hyperlinks](https://www.computerhope.com/jargon/h/hyperlink.htm): The accumulation of links leading to broken or dead websites. Link rot a pet peeve of mine and [happens with alarming frequency](https://harvardlawreview.org/2014/03/perma-scoping-and-addressing-the-problem-of-link-and-reference-rot-in-legal-citations/). When surfing the internet I am expecting any link I encounter to work. Link rot shatters these expectations and can make reading frustrating.
 
-Previously, [I experimented with providing archived links for each link present]({{ relref . "why-im-using-a-notation.md }}). This so-called (a) notation provides an alternative, archived link should the primary link rot. In theory, these snapshots of web pages minimise the impact of link rot. Unfortunately, these websites can themselves rot, and these (a) links are cryptic. What would you think and do if you saw a link followed by (a)? Would you click on the link, discover it's dead, and then try the (a) link instead?
+Previously, [I experimented with providing archived links for each link present]({{< relref "why-im-using-a-notation" >}}). This so-called (a) notation provides an alternative, archived link should the primary link rot. In theory, these snapshots of web pages minimise the impact of link rot. Unfortunately, these websites can themselves rot, and these (a) links are cryptic. What would you think and do if you saw a link followed by (a)? Would you click on the link, discover it's dead, and then try the (a) link instead?
 
 The majority of readers don't care whether a link is archived or not (if you do I'm curious to know why). Readers expect links to work all day, every day. How this is done is the website's business and not the user's, it is a matter of infrastructure. By following links with (a) we leak the archiving aspect into the wild. Using an archived page should be built into the links. When the user clicks a link they should arrive at the intended page whether archived or not.
 
@@ -79,7 +79,7 @@ One important factor to consider here is that the archived page used must be the
 
 # The Components
 
-{{< figure src="img/2021/archiving/link-archiving.svg title="Components in the link archiving process" >}}
+{{< figure src="img/posts/2021/archiving/link-archiving.svg" title="Components in the link archiving process" >}}
 
 ## Blog
 
@@ -113,7 +113,7 @@ All these factors led me to rent a [Virtual Private Server (VPS)](https://en.wik
 
 {{< figure src="img/posts/2021/archiving/nginx-and-bridge.svg" title="Nginx and Archive Box bridge setup" >}}
 
-I chose [Archive Box](https://archivebox.io/) as my archiving software. It bundles SingleFile for downloading entire pages. It also uploads to [[Archive.org](http://archive.org)](https://www.archive.org) to assist with the global digital archiving effort. Should I make changes and include uBlock Origin in the future, by using Archive Box others will also have access to those changes. It seems fair given I receive such features from those who came before.
+I chose [Archive Box](https://archivebox.io/) as my archiving software. It bundles SingleFile for downloading entire pages. It also uploads to [Archive.org](http://archive.org) to assist with the global digital archiving effort. Should I make changes and include uBlock Origin in the future, by using Archive Box others will also have access to those changes. It seems fair given I receive such features from those who came before.
 
 Another option would be [Archive Team's Warrior project](https://wiki.archiveteam.org/index.php/ArchiveTeam_Warrior) but they intend this to be used for contributing to their archiving project rather than running a specific personal archive.
 
@@ -157,7 +157,7 @@ The archived links need to be publicly available, otherwise readers cannot visit
 1. A typical web server, hosted on a VPS.
 2. The aforementioned Archive services.
 3. [IPFS](https://ipfs.io/)
-4. Cloud hosted storage ([Amazon Web Services' Simple Storage Service (S3)](https://aws.amazon.com/s3/). 
+4. Cloud hosted storage ([Amazon Web Services' Simple Storage Service (S3)](https://aws.amazon.com/s3/)). 
 
 Since we archive the entire page, including media, the space requirements are potentially large. This equates to higher costs when using a VPS. Higher than I'm willing to pay for a personal website when there are other options to consider.
 
