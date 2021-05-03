@@ -5,7 +5,7 @@ tags: ["blog", "archiving links"]
 draft: true
 ---
     
-Link rot is the term given to the decay of [hyperlinks]([https://www.computerhope.com/jargon/h/hyperlink.htm](https://www.computerhope.com/jargon/h/hyperlink.htm)): The accumulation of links leading to broken or dead websites. Link rot a pet peeve of mine and [happens with alarming frequency]([https://harvardlawreview.org/2014/03/perma-scoping-and-addressing-the-problem-of-link-and-reference-rot-in-legal-citations/](https://harvardlawreview.org/2014/03/perma-scoping-and-addressing-the-problem-of-link-and-reference-rot-in-legal-citations/)). When surfing the internet I am expecting any link I encounter to work. Link rot shatters these expectations and can make reading frustrating.
+Link rot is the term given to the decay of [hyperlinks](https://www.computerhope.com/jargon/h/hyperlink.htm): The accumulation of links leading to broken or dead websites. Link rot a pet peeve of mine and [happens with alarming frequency](https://harvardlawreview.org/2014/03/perma-scoping-and-addressing-the-problem-of-link-and-reference-rot-in-legal-citations/). When surfing the internet I am expecting any link I encounter to work. Link rot shatters these expectations and can make reading frustrating.
 
 Previously, [I experimented with providing archived links for each link present]({{ relref . "why-im-using-a-notation.md }}). This so-called (a) notation provides an alternative, archived link should the primary link rot. In theory, these snapshots of web pages minimise the impact of link rot. Unfortunately, these websites can themselves rot, and these (a) links are cryptic. What would you think and do if you saw a link followed by (a)? Would you click on the link, discover it's dead, and then try the (a) link instead?
 
@@ -15,7 +15,7 @@ With this in mind, I embarked on a journey to remove these (a) links and build a
 
 In my naiveté I thought the process would look something like: 1) scanning markdown files checked into git for links, 2) archiving, or downloading them to a web server 3) updating the markdown files with the archived links. After some investigation I came to realise that, as with many things, it's much more complicated than that.
 
-What follows details my design and development log. It is largely inspired by [gwern's own system]([https://www.gwern.net/Archiving-URLs](https://www.gwern.net/Archiving-URLs#footnotes)).
+What follows details my design and development log. It is largely inspired by [gwern's own system](https://www.gwern.net/Archiving-URLs).
 
 # The Overall Process
 
@@ -78,7 +78,9 @@ One important factor to consider here is that the archived page used must be the
 
 # The Components
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f5fe9678-5f6e-4ba6-b87e-00a048087290/link-archiving.svg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f5fe9678-5f6e-4ba6-b87e-00a048087290/link-archiving.svg)
+```
+TODO DIAGRAM HERE
+```
 
 Sequence diagram of my link archiving process
 
@@ -92,9 +94,9 @@ Publishing an article involves creating a pull request. On this pull request, th
 TODO DIAGRAM HERE
 ```
 
-As part of this pull request, the [GitHub Actions]([https://docs.github.com/en/actions/quickstart](https://docs.github.com/en/actions/quickstart#)) Runner executes a workflow. [This workflow]([https://github.com/thomaspaulin/blog.thomaspaulin.me/blob/master/.github/workflows/link-archiver.yml](https://github.com/thomaspaulin/blog.thomaspaulin.me/blob/master/.github/workflows/link-archiver.yml)) uses an [Action I have created]([https://github.com/thomaspaulin/markdown-link-finder/releases/tag/v1](https://github.com/thomaspaulin/markdown-link-finder/releases/tag/v1)) to scan the modified and added markdown files. This scan looks for any [links]([https://www.markdownguide.org/basic-syntax#links](https://www.markdownguide.org/basic-syntax#links)) present, checks they are valid, and then it submits any links it finds to the Link Archive.
+As part of this pull request, the [GitHub Actions](https://docs.github.com/en/actions/quickstart) Runner executes a workflow. [This workflow](https://github.com/thomaspaulin/blog.thomaspaulin.me/blob/master/.github/workflows/link-archiver.yml) uses an [Action I have created](https://github.com/thomaspaulin/markdown-link-finder/releases/tag/v1) to scan the modified and added markdown files. This scan looks for any [links](https://www.markdownguide.org/basic-syntax#links) present, checks they are valid, and then it submits any links it finds to the Link Archive.
 
-Initially, this step used [SingleFile]([https://github.com/gildas-lormeau/SingleFile](https://github.com/gildas-lormeau/SingleFile)), a browser extension which downloads a web page and its dependencies into a... single file. By saving in this manner we can bypass the archive component too and upload directly to S3. In an ideal world I would have run the [SingleFile CLI]([https://github.com/gildas-lormeau/SingleFile/tree/master/cli](https://github.com/gildas-lormeau/SingleFile/tree/master/cli)) with [a customised]([https://github.com/uBlockOrigin/uBlock-issues/issues/1111](https://github.com/uBlockOrigin/uBlock-issues/issues/1111)) [uBlock Origin]([https://ublockorigin.com/](https://ublockorigin.com/)) installed as blocking advertisements and disabling [cookie banners]([https://www.vox.com/recode/2019/12/10/18656519/what-are-cookies-website-tracking-gdpr-privacy](https://www.vox.com/recode/2019/12/10/18656519/what-are-cookies-website-tracking-gdpr-privacy)) improves reader experience, [without a negative effect on performance]([https://kevin.borgolte.me/files/pdf/www2020-privacy-extensions.pdf](https://kevin.borgolte.me/files/pdf/www2020-privacy-extensions.pdf)). Alas, configuring SingleFile as I desired proved to be much more work than I had anticipated and instead I opted to use an existing piece of archiving software.
+Initially, this step used [SingleFile](https://github.com/gildas-lormeau/SingleFile), a browser extension which downloads a web page and its dependencies into a... single file. By saving in this manner we can bypass the archive component too and upload directly to S3. In an ideal world I would have run the [SingleFile CLI](https://github.com/gildas-lormeau/SingleFile/tree/master/cli) with [a customised](https://github.com/uBlockOrigin/uBlock-issues/issues/1111) [uBlock Origin](https://ublockorigin.com/) installed as blocking advertisements and disabling [cookie banners](https://www.vox.com/recode/2019/12/10/18656519/what-are-cookies-website-tracking-gdpr-privacy) improves reader experience, [without a negative effect on performance](https://kevin.borgolte.me/files/pdf/www2020-privacy-extensions.pdf). Alas, configuring SingleFile as I desired proved to be much more work than I had anticipated and instead I opted to use an existing piece of archiving software.
 
 ## Link Archive
 
@@ -108,9 +110,9 @@ I don't want to take a performance hit by constantly archiving each web page I o
 
 More important than storage and performance implications though is that I use multiple devices. Creating and/or setting up infrastructure to send history from each device to a central archive takes time and complexity. More time than fixing the odd broken link before I publish. Especially given writing these posts is a hobby rather than a full-time position. 
 
-If instead, I opt for one archive on each device I lower complexity, but introduce the challenge of managing and synchronising archives across multiple devices. Perhaps a [Network Attached Storage (NAS)]([https://en.wikipedia.org/wiki/Network-attached_storage](https://en.wikipedia.org/wiki/Network-attached_storage)) which hosts the archive program and receives browser history from each of my devices is a good idea. Indeed, if it’s exposed to the world and accessible when I’m travelling, it is. The drawback of a NAS though is that it requires investment in physical hardware and proper backup discipline, lest I lose the entire archive I add to the rot. 
+If instead, I opt for one archive on each device I lower complexity, but introduce the challenge of managing and synchronising archives across multiple devices. Perhaps a [Network Attached Storage (NAS)](https://en.wikipedia.org/wiki/Network-attached_storage) which hosts the archive program and receives browser history from each of my devices is a good idea. Indeed, if it’s exposed to the world and accessible when I’m travelling, it is. The drawback of a NAS though is that it requires investment in physical hardware and proper backup discipline, lest I lose the entire archive I add to the rot. 
 
-All these factors led me to rent a [Virtual Private Server (VPS)]([https://en.wikipedia.org/wiki/Virtual_private_server](https://en.wikipedia.org/wiki/Virtual_private_server)). My Hetzner VPS (recommended by friends in the known and whom I trust, as well as Reddit) offers the benefit of a NAS that is publicly available without breaking the bank. Because of bandwidth limits, and the storage limited mentioned, I have accepted there will be a delay in finding a source and archiving. Git's pre/post-commit hooks can reduce this delay. I intend to investigate their feasibility in the future.
+All these factors led me to rent a [Virtual Private Server (VPS)](https://en.wikipedia.org/wiki/Virtual_private_server). My [Hetzner VPS](https://www.hetzner.com/cloud) (recommended by friends in the known and whom I trust, as well as Reddit) offers the benefit of a NAS that is publicly available without breaking the bank. Because of bandwidth limits, and the storage limited mentioned, I have accepted there will be a delay in finding a source and archiving. Git's pre/post-commit hooks can reduce this delay. I intend to investigate their feasibility in the future.
 
 ### Software Used
 
@@ -118,19 +120,19 @@ All these factors led me to rent a [Virtual Private Server (VPS)]([https://en.wi
 TODO DIAGRAM HERE
 ```
 
-I chose [Archive Box]([https://archivebox.io/](https://archivebox.io/)) as my archiving software. It bundles SingleFile for downloading entire pages. It also uploads to [[Archive.org](http://archive.org)](https://www.archive.org) to assist with the global digital archiving effort. Should I make changes and include uBlock Origin in the future, by using Archive Box others will also have access to those changes. It seems fair given I receive such features from those who came before.
+I chose [Archive Box](https://archivebox.io/) as my archiving software. It bundles SingleFile for downloading entire pages. It also uploads to [[Archive.org](http://archive.org)](https://www.archive.org) to assist with the global digital archiving effort. Should I make changes and include uBlock Origin in the future, by using Archive Box others will also have access to those changes. It seems fair given I receive such features from those who came before.
 
-Another option would be [Archive Team's Warrior project]([https://wiki.archiveteam.org/index.php/ArchiveTeam_Warrior](https://wiki.archiveteam.org/index.php/ArchiveTeam_Warrior)) but they intend this to be used for contributing to their archiving project rather than running a specific personal archive.
+Another option would be [Archive Team's Warrior project](https://wiki.archiveteam.org/index.php/ArchiveTeam_Warrior) but they intend this to be used for contributing to their archiving project rather than running a specific personal archive.
 
 I used remote caching in the form of existing archiving services when I took the (a) links approach. I found them to be slow and painful to use when writing articles. In addition, I had seen them rot first hand. Local caching offers more control and an improved reader and writer experience once set up.
 
-Therefore, I chose Archive Box. I run it via [Docker Compose]([https://docs.docker.com/compose/](https://docs.docker.com/compose/)) for simplicity's sake.
+Therefore, I chose Archive Box. I run it via [Docker Compose](https://docs.docker.com/compose/) for simplicity's sake.
 
-Because Archive Box runs either as a CLI on the local machine, or as a web UI, I needed to build a bridge between its CLI and the workflow on GitHub. I used [Nginx as a reverse proxy]([https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)) to do this. Nginx calls [an HTTP server written in Go]([https://github.com/thomaspaulin/archive-box-bridge](https://github.com/thomaspaulin/archive-box-bridge)), which runs on the same machine as Archive Box, and calls the Archive Box CLI to start the archiving. By evoking an executable (`docker-compose`) I've created an additional attack surface on my VPS. I've tried to adhere to the [principle of least privilege]([https://en.wikipedia.org/wiki/Principle_of_least_privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)) in order to reduce the attack surface's impact.
+Because Archive Box runs either as a CLI on the local machine, or as a web UI, I needed to build a bridge between its CLI and the workflow on GitHub. I used [Nginx as a reverse proxy](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) to do this. Nginx calls [an HTTP server written in Go](https://github.com/thomaspaulin/archive-box-bridge), which runs on the same machine as Archive Box, and calls the Archive Box CLI to start the archiving. By evoking an executable (`docker-compose`) I've created an additional attack surface on my VPS. I've tried to adhere to the [principle of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) in order to reduce the attack surface's impact.
 
 ## Link Checker
 
-A script powered by [Broken Link Checker]([https://github.com/stevenvachon/broken-link-checker](https://github.com/stevenvachon/broken-link-checker)) runs automatically as a [cron job]([https://en.wikipedia.org/wiki/Cron](https://en.wikipedia.org/wiki/Cron)) and crawls the entire blog starting from the [home page]([https://blog.thomaspaulin.me/](https://blog.thomaspaulin.me/)). It checks each link it discovers against an "ignore list" before deciding to proceed. The ignore list contains the hosts considered reliable. The script will not archive links from these hosts, as they have proven themselves stable. An example is Wikipedia. Wikipedia's articles last a long time and their URL format remains consist. Wikipedia's risk (and benefit) comes from publicly editable content, which is in flux.
+A script powered by [Broken Link Checker](https://github.com/stevenvachon/broken-link-checker) runs automatically as a [cron job](https://en.wikipedia.org/wiki/Cron) and crawls the entire blog starting from the [home page](https://blog.thomaspaulin.me/). It checks each link it discovers against an "ignore list" before deciding to proceed. The ignore list contains the hosts considered reliable. The script will not archive links from these hosts, as they have proven themselves stable. An example is Wikipedia. Wikipedia's articles last a long time and their URL format remains consist. Wikipedia's risk (and benefit) comes from publicly editable content, which is in flux.
 
 When the script finds broken, and "unignored" link, it notes down the link. Once crawling completes the script emails me the list of broken links indexed by the blog page they came from.
 
@@ -142,7 +144,7 @@ This script runs once a month.
 
 ## Link Fixing Process
 
-Currently, this is a manual process. I experimented with automating this process. [It ended up taking more time]([https://xkcd.com/1205/](https://xkcd.com/1205/)) than manually replacing the odd link. This is especially true because the running scripts email me exactly what broke. Until the link count on this blog grows substantially, replacing rotten links by hand is sufficient.
+Currently, this is a manual process. I experimented with automating this process. [It ended up taking more time](https://xkcd.com/1205/) than manually replacing the odd link. This is especially true because the running scripts email me exactly what broke. Until the link count on this blog grows substantially, replacing rotten links by hand is sufficient.
 
 The process itself goes something like this:
 
@@ -163,14 +165,14 @@ The archived links need to be publicly available, otherwise readers cannot visit
 
 1. A typical web server, hosted on a VPS.
 2. The aforementioned Archive services.
-3. [IPFS]([https://ipfs.io/](https://ipfs.io/))
-4. Cloud hosted storage ([Amazon Web Services' Simple Storage Service (S3)]([https://aws.amazon.com/s3/](https://aws.amazon.com/s3/))). 
+3. [IPFS](https://ipfs.io/)
+4. Cloud hosted storage ([Amazon Web Services' Simple Storage Service (S3)](https://aws.amazon.com/s3/). 
 
 Since we archive the entire page, including media, the space requirements are potentially large. This equates to higher costs when using a VPS. Higher than I'm willing to pay for a personal website when there are other options to consider.
 
 Existing archive services offer a solution to the storage costs, but are slow and susceptible to rot.
 
-IPFS is a distributed system. This reduces the risk of rot and the space requirements. Unfortunately, it is slow and [browser support of the IPFS protocol is limited]([https://brave.com/brave-integrates-ipfs/](https://brave.com/brave-integrates-ipfs/)).
+IPFS is a distributed system. This reduces the risk of rot and the space requirements. Unfortunately, it is slow and [browser support of the IPFS protocol is limited](https://brave.com/brave-integrates-ipfs/).
 
 This lead me to Amazon's Simple Storage Service, or S3. S3 can serve files like a web server. Thanks to Amazon's extensive infrastructure, it is fast and low cost. This introduces a dependency on AWS to the archiving system, but my blog already depends AWS, so we did not introduce further dependencies.
 
@@ -179,6 +181,6 @@ This lead me to Amazon's Simple Storage Service, or S3. S3 can serve files like 
 First, the system needs to run in the wild for some time to evaluate its performance and maintenance requirements. Once I have a better feeling for how it practically works, I will consider improvements which may include some of:
 
 - Run the archiver script after 90 days for each post. This means keeping track of a schedule for each post. Useful for discussions which take time to settle. 90 days is roughly how long a web page will live.
-- Ignore top-level domains for link finding and archiving (e.g. [example.com](http://example.com) as opposed to example.com/posts/2021/4/28/the-use-of-examples). Top-level domains rarely provide information that would be useful for posts. Linking to them in an article should save the user time and allow them to visit linked companies/services without performing a search.
+- Ignore top-level domains for link finding and archiving (e.g. example.com as opposed to example.com/posts/2021/4/28/the-use-of-examples). Top-level domains rarely provide information that would be useful for posts. Linking to them in an article should save the user time and allow them to visit linked companies/services without performing a search.
 - Upgrade the bridge to use asynchronous endpoints, and implement a job system. This will allow for scaling improvements as the current implementation is limited by Nginx's `proxy_timeout`.
 - Evaluate automation of the link fixing process.
