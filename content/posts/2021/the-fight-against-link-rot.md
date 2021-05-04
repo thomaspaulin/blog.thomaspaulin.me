@@ -1,20 +1,20 @@
 ---
 title: "The Fight Against Link Rot"
-date: 2021-05-04
+date: 2021-05-03
 description: "The accumulation of links leading to dead or broken websites is rife throughout the internet and harms reader experience. I've designed a system to combat this link rot through a series of scripts and more. This post details the components, their reasons for existence, and why I made the choices I did."
 tags: ["blog", "archiving links"]
 draft: false
 ---
     
-Link rot is the term given to the decay of [hyperlinks](https://www.computerhope.com/jargon/h/hyperlink.htm): The accumulation of links leading to broken or dead websites. Link rot a pet peeve of mine and [happens with alarming frequency](https://harvardlawreview.org/2014/03/perma-scoping-and-addressing-the-problem-of-link-and-reference-rot-in-legal-citations/). When surfing the internet I am expecting any link I encounter to work. Link rot shatters these expectations and can make reading frustrating.
+Link rot is the term given to the decay of [hyperlinks](https://www.computerhope.com/jargon/h/hyperlink.htm): The accumulation of links leading to broken or dead websites. It is a pet peeve of mine and [happens with alarming frequency](https://harvardlawreview.org/2014/03/perma-scoping-and-addressing-the-problem-of-link-and-reference-rot-in-legal-citations/). When surfing the internet I expect any link I encounter to work. Link rot shatters these expectations and can make reading frustrating.
 
-Previously, [I experimented with providing archived links for each link present]({{< relref "why-im-using-a-notation" >}}). This so-called (a) notation provides an alternative, archived link should the primary link rot. In theory, these snapshots of web pages minimise the impact of link rot. Unfortunately, these websites can themselves rot, and these (a) links are cryptic. What would you think and do if you saw a link followed by (a)? Would you click on the link, discover it's dead, and then try the (a) link instead?
+Previously, [I experimented with providing archived versions of each link present]({{< relref "why-im-using-a-notation" >}}). This so-called (a) notation provides these. In theory, these minimise the impact of link rot, unfortunately, the websites holding these archived copies can themselves rot. Furthermore, these (a) links are cryptic: What would you do if you saw a link followed by (a)? Would you click it, discover the destination page is dead, and then try the (a) link instead?
 
-The majority of readers don't care whether a link is archived or not (if you do I'm curious to know why). Readers expect links to work all day, every day. How this is done is the website's business and not the user's, it is a matter of infrastructure. By following links with (a) we leak the archiving aspect into the wild. Using an archived page should be built into the links. When the user clicks a link they should arrive at the intended page whether archived or not.
+Most readers don’t care whether a link is archived. They expect links to work 24/7. Thus archiving is a matter of infrastructure. By following links with (a) we leak the infrastructure into the wild, exposing our black box’s internals. Using an archived page should be built into the links, so that when a reader clicks a link, they arrive at the intended page.
 
 With this in mind, I embarked on a journey to remove these (a) links and build a system to archive links before they rot.
 
-In my naiveté I thought the process would look something like: 1) scanning markdown files checked into git for links, 2) archiving, or downloading them to a web server 3) updating the markdown files with the archived links. After some investigation I came to realise that, as with many things, it's much more complicated than that.
+In my naivety I thought the process would look something like: 1) scanning markdown files checked into git for links, 2) archiving, or downloading them to a web server 3) updating the markdown files with the archived links. After some investigation I came to realise it's much more complicated.
 
 What follows details my design and development log. It is largely inspired by [gwern's own system](https://www.gwern.net/Archiving-URLs).
 
@@ -31,7 +31,7 @@ To proceed further we must discuss the components which are used in each of thes
 
 ## Extracting Links From Articles
 
-The gist of this step is in the name. Find and collate the links present in an article. Because the articles use a pre-defined link format, this becomes a matter of parsing the article content.
+The gist of this step is in the name. Find and collate the links present in an article. Because my posts use a pre-defined link format, this becomes a matter of parsing the article content.
 
 ## Archiving Links
 
@@ -49,7 +49,7 @@ The internet has pre-existing archival services available e.g., [Archive.org](ht
 
 ### Local Caches
 
-Services hosted by me. Typically, these are hosted from my computer, but I am considering services hosted services under my control as the same. These methods offer greater control, but at the cost of maintenance, and for hosted services, monetary cost.
+Services hosted by me. Typically, these are hosted from my computer, but I am considering services hosted services under my control as the same. This approach provides greater control, but at the cost of maintenance, and for hosted services, monetary cost.
 
 Besides remote and local caches, I believe there are two other schools of thought: immediate and delayed caching.
 
@@ -85,9 +85,9 @@ One important factor to consider here is that the archived page used must be the
 
 Publishing an article involves creating a pull request. On this pull request, the pipeline seen in the sequence diagram is run.
 
-## Archiver Script
+## Archiving Script
 
-{{< figure src="img/posts/2021/archiving/archiver-script.svg" title="The archiver script flow" >}}
+{{< figure src="img/posts/2021/archiving/archiving-script.svg" title="The archiving script flow" >}}
 
 As part of this pull request, the [GitHub Actions](https://docs.github.com/en/actions/quickstart) Runner executes a workflow. [This workflow](https://github.com/thomaspaulin/blog.thomaspaulin.me/blob/master/.github/workflows/link-archiver.yml) uses an [Action I have created](https://github.com/thomaspaulin/markdown-link-finder/releases/tag/v1) to scan the modified and added markdown files. This scan looks for any [links](https://www.markdownguide.org/basic-syntax#links) present, checks they are valid, and then it submits any links it finds to the Link Archive.
 
@@ -171,7 +171,7 @@ This lead me to Amazon's Simple Storage Service, or S3. S3 can serve files like 
 
 First, the system needs to run in the wild for some time to evaluate its performance and maintenance requirements. Once I have a better feeling for how it practically works, I will consider improvements which may include some of:
 
-- Run the archiver script after 90 days for each post. This means keeping track of a schedule for each post. Useful for discussions which take time to settle. 90 days is roughly how long a web page will live.
+- Run the archiving script after 90 days for each post. This means keeping track of a schedule for each post. Useful for discussions which take time to settle. 90 days is roughly how long a web page will live.
 - Ignore top-level domains for link finding and archiving (e.g. example.com as opposed to example.com/posts/2021/4/28/the-use-of-examples). Top-level domains rarely provide information that would be useful for posts. Linking to them in an article should save the user time and allow them to visit linked companies/services without performing a search.
 - Upgrade the bridge to use asynchronous endpoints, and implement a job system. This will allow for scaling improvements as the current implementation is limited by Nginx's `proxy_timeout`.
 - Evaluate automation of the link fixing process.
