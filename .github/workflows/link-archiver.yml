@@ -34,4 +34,4 @@ jobs:
           LINKS: ${{ steps.link-finder.outputs.links }}
           ARCHIVE_BOX_HOST: ${{ secrets.ARCHIVE_BOX_HOST }}
         run: |
-          curl --connect-timeout 20 -H 'Content-Type: application/json' --post301 -d "$LINKS" -iLv "$ARCHIVE_BOX_HOST/archive-links"
+          curl --connect-timeout 20 -H 'Content-Type: application/json' --fail --post301 -d "$LINKS" -iLv "$ARCHIVE_BOX_HOST/archive-links"
