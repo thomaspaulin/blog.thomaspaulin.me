@@ -25,7 +25,7 @@ jobs:
           format: 'csv'
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Find links
-        uses: thomaspaulin/markdown-link-finder@3.0.0
+        uses: thomaspaulin/markdown-link-finder@v3.0.0-alpha
         id: link-finder
         with:
           files: ${{ steps.diff.outputs.added_modified }}
