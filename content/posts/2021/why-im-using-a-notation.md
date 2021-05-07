@@ -4,6 +4,10 @@ date: 2021-01-14
 tags: ["blog", "archiving links"]
 draft: false
 ---
+**UPDATE 2021-04-28: Since writing this article I have moved to [a system]({{< relref "the-fight-against-link-rot" >}}) which removes the need for (a) links. I've kept the existing (a) links here for demonstrative purposes.**
+
+---
+
 As anyone who has spent time reading old blogs knows it's merely a matter of time before a link breaks.
 
 This ["link rot"](https://en.wikipedia.org/wiki/Link_rot) [(a)](https://web.archive.org/web/20210113085016/https://en.wikipedia.org/wiki/Link_rot) can happen for a number of reasons but regardless of its cause one thing is for certain: it has a negative impact on the reader's experience should they wish to follow the links.
