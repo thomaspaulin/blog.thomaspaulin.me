@@ -26,7 +26,7 @@ Next, it's time to fetch our dependencies using `npm install`.
 
 Once complete you should be able to run `npm start` and see this:
 
-{{< figure src="img/posts/2021/deckgl-mapbox-example-running.png" title="The Mapbox getting started example" >}}
+{{< figure src="img/posts/2021/deckgl-mapbox-example-running.png" caption="The Mapbox getting started example" alt="The deck.gl Mapbox example up and running">}}
 
 Your `app.js` file should look something like this:
 
@@ -44,7 +44,7 @@ The response we receive is not in the format [deck.gl](http://deck.gl) expects, 
 
 Once we've added this mapping into the response chain we also call the same `render(...)` function we created earlier. After running, we should see the flights rendered on the map.
 
-{{< figure src="img/posts/2021/deckgl-opensky-flight-info-plotted.png" title="Flight information from the OpenSky Network API rendered" >}}
+{{< figure src="img/posts/2021/deckgl-opensky-flight-info-plotted.png" caption="Flight information from the OpenSky Network API rendered" alt="Flights plotted on the map using information from the OpenSky Network API" >}}
 
 # Notes
 - The `webpack.config.js` file says the local development overrides should be removed from the file. I haven't had an issue with this so for now they can stay. If you wish to remove them, changing the final line to `module.exports = env => CONFIG;` should suffice.
