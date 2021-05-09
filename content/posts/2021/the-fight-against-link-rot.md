@@ -10,7 +10,7 @@ Link rot is the term given to the decay of [hyperlinks](https://www.computerhope
 
 Previously, [I experimented with providing archived versions of each link present]({{< relref "why-im-using-a-notation" >}}). This so-called (a) notation provides these. In theory, these minimise the impact of link rot, unfortunately, the websites holding these archived copies can themselves rot. Furthermore, these (a) links are cryptic: What would you do if you saw a link followed by (a)? Would you click it, discover the destination page is dead, and then try the (a) link instead?
 
-Most readers don’t care whether a link is archived. They expect links to work 24/7. Thus archiving is a matter of infrastructure. By following links with (a) we leak the infrastructure into the wild, exposing our black box’s internals. Using an archived page should be built into the links, so that when a reader clicks a link, they arrive at the intended page.
+Most readers don’t care whether a link is archived. They expect links to work 24/7. Thus archiving is a matter of infrastructure. By following links with (a) the infrastructure leaks into the wild, exposing our black box’s internals. Using an archived page should be built into the links, so that when a reader clicks a link, they arrive at the intended page.
 
 With this in mind, I embarked on a journey to remove these (a) links and build a system to archive links before they rot.
 
@@ -61,7 +61,7 @@ The best example of this would be to archive (cache) browser history as you surf
 
 An example of this would be to archive the links present when an article is published. Because the time between finding the source and publishing can be anywhere from minutes to years, the risk of links rotting in the meantime can be high. Not only is the risk higher, but once a link is rotten, finding an archived version is very difficult to impossible.
 
-At least your computer performance won't be hampered.
+At least my computer's performance won't be hampered.
 
 ## Checking For Broken Links
 
@@ -79,7 +79,7 @@ One important factor to consider here is that the archived page used must be the
 
 # The Components
 
-{{< figure src="img/posts/2021/archiving/link-archiving.svg" title="Components in the link archiving process" >}}
+{{< figure src="img/posts/2021/archiving/link-archiving.svg" alt="The components in the link archiving process" caption="The components in the link archiving process" >}}
 
 ## Blog
 
@@ -87,7 +87,7 @@ Publishing an article involves creating a pull request. On this pull request, th
 
 ## Archiving Script
 
-{{< figure src="img/posts/2021/archiving/archiving-script.svg" title="The archiving script flow" >}}
+{{< figure src="img/posts/2021/archiving/archiving-script.svg" alt="The archiving script flow" caption="The archiving script flow" >}}
 
 As part of this pull request, the [GitHub Actions](https://docs.github.com/en/actions/quickstart) Runner executes a workflow. [This workflow](https://github.com/thomaspaulin/blog.thomaspaulin.me/blob/master/.github/workflows/link-archiver.yml) uses an [Action I have created](https://github.com/thomaspaulin/markdown-link-finder/releases/tag/v1) to scan the modified and added markdown files. This scan looks for any [links](https://www.markdownguide.org/basic-syntax#links) present, checks they are valid, and then it submits any links it finds to the Link Archive.
 
@@ -111,7 +111,7 @@ All these factors led me to rent a [Virtual Private Server (VPS)](https://en.wik
 
 ### Software Used
 
-{{< figure src="img/posts/2021/archiving/nginx-and-bridge.svg" title="Nginx and Archive Box bridge setup" >}}
+{{< figure src="img/posts/2021/archiving/nginx-and-bridge.svg" alt="The nginx and Archive Box bridge setup" caption="The nginx and Archive Box bridge setup" >}}
 
 I chose [Archive Box](https://archivebox.io/) as my archiving software. It bundles SingleFile for downloading entire pages. It also uploads to [Archive.org](http://archive.org) to assist with the global digital archiving effort. Should I make changes and include uBlock Origin in the future, by using Archive Box others will also have access to those changes. It seems fair given I receive such features from those who came before.
 
@@ -148,7 +148,7 @@ The process itself goes something like this:
 5. Update the post's Markdown with the new identifier
 6. Create a pull request with the changes and merge it to master
 
-{{< figure src="img/posts/2021/archiving/link-fixing-process.svg" title="Link fixing process" >}}
+{{< figure src="img/posts/2021/archiving/link-fixing-process.svg" alt="The link fixing process" caption="The link fixing process" >}}
 
 ### Why S3?
 

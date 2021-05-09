@@ -9,15 +9,15 @@ As part of another project I wished to render data points on a map in real-time,
 
 For this project, I've chosen flight data because I'm a fan of anything aerospace. The OpenSky Network API provides [a free API for live flight information](https://opensky-network.org/apidoc/) (for research and non-commercial purposes). I wanted to use Earth observation data for this project, but that data is not real-time thanks to orbital periods. 
 
-Information about the data provided by The OpenSky Network API [can be found on their documentation](https://opensky-network.org/apidoc/). We will receive descriptive and positional information derived from [ADS-B](https://www.faa.gov/nextgen/programs/adsb/) and [Mode-S transponder](https://trig-avionics.com/knowledge-bank/transponders/mode-s/) messages. Using this information we can render the flight on a map.
+Information about the data provided by The OpenSky Network API can be found on their documentation. We will receive descriptive and positional information derived from [ADS-B](https://www.faa.gov/nextgen/programs/adsb/) and [Mode-S transponder](https://trig-avionics.com/knowledge-bank/transponders/mode-s/) messages. Using this information we can render the flight on a map.
 
 # The Cast
 - [deck.gl](http://deck.gl) - used to render data on the map
-- [Mapbox GL JS](https://www.mapbox.com/mapbox-gljs) - used to render the map itself. Provided by the deck.gl examples.
+- [Mapbox GL JS](https://www.mapbox.com/mapbox-gljs) - used to render the map itself. Provided by the deck.gl examples
 - [The OpenSky Network API](https://opensky-network.org/) - provides the flight information
 - [Webpack](https://webpack.js.org/) - to bundles everything nicely and provides a better developer experience
 - npm - for package management
-- [webpack-dev-server package](https://github.com/webpack/webpack-dev-server) - to run a local server and verify the results by eye. Provided by the deck.gl examples.
+- [webpack-dev-server package](https://github.com/webpack/webpack-dev-server) - to run a local server and verify the results by eye. Provided by the deck.gl examples
 - Javascript - for writing the code. Typescript takes extra setup which is unnecessary for our purposes
 
 In the beginning, there was nothing, no code, no frameworks, just a blank directory staring back at us. To fix this we clone the [deck.gl repository](https://github.com/visgl/deck.gl/). We will be working from the Mapbox directory (`/examples/get-started/pure-js/mapbox/`).

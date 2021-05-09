@@ -11,9 +11,9 @@ Laters later a part of me wants to learn these skills once more only this time t
 First I need to learn how to use CAD software and with [Fusion 360 being free for hobbyists](https://www.autodesk.com/products/fusion-360/personal) it's the natural starting point.
 In order to begin learning Fusion 360 I've decided to take Kevin Kennedy's Learn Fusion 360 in 30 Days course, which is available on [Skillshare](https://www.skillshare.com/classes/Learn-Fusion-360-in-30-Days-for-Complete-Beginners-2019/1650486259) or [YouTube](https://www.youtube.com/playlist?list=PLrZ2zKOtC_-DR2ZkMaK3YthYLErPxCnT-).
 
-### Why a 30 day challenge? 
+### Why a 30-day challenge? 
 Small, consistent progress greatly helps with progression and learning and without obvious stepping stones I have a tendency to aim for overly ambitious projects which are unobtainable by a complete beginner in a reason timespan, thus wasting a significant amount of time and becoming demotivated as explained on the diagram below of challenge vs. ability.
-{{< figure src="img/challenge-vs-ability.jpg" alt="Challenge vs. Ability" >}}
+{{< figure src="img/challenge-vs-ability.jpg" alt="Challenge vs. Ability in a diagram. High challenge coupled with high ability leads to a flow state, the state we are aiming for." >}}
 
 ### Why this course? 
 Kevin comes with many recommendations, prompting me to watch one of his [beginner friendly videos](https://www.youtube.com/watch?v=qvrHuaHhqHI).
@@ -21,7 +21,7 @@ Kevin has a very clear and concise style where he walks you through every step c
 His projects are also real-world objects relevant to hobbyists or makers. This is in contrast with other practice exercises I found - these tended to be geometric shapes constructed by following plans, making the concepts that little bit harder to grasp.
 
 # Daily Logs
-This section containts links to each daily log entry and will therefore evolve as the challenge progresses. Check back for updates.
+This section contains links to each daily log entry and will therefore evolve as the challenge progresses. Check back for updates.
 
 - [Day 1 - Lego brick](https://a360.co/2AnhHpz)
 - [Day 2 - Beer bottle](https://a360.co/31McVxd)
@@ -38,7 +38,7 @@ This section containts links to each daily log entry and will therefore evolve a
 - Day 13 - Bodies vs components - Theory Only
 - [Day 14 - Screwdriver](https://a360.co/3glpoMi)
 - [Day 15 - Painter's tripod](https://a360.co/3izTe1g)
-- Day 16 - Sketch contraints - Theory Only
+- Day 16 - Sketch constraints - Theory Only
 - [Day 17 - Washer plate](https://a360.co/2Dd4C39)
 - [Day 18 - Phone stand](https://a360.co/31MiUSH)
 - [Day 19 - Hinged box](https://a360.co/2ZBOCzm)
