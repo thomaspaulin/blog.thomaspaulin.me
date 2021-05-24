@@ -4,6 +4,7 @@ date: 2020-02-16
 tags: ["blog", "design", "hugo", "themes"]
 draft: false
 ---
+**UPDATE 2021-05-24: I have since removed the blog subdomain. All blog.thomaspaulin.me links should redirect you to [thomaspaulin.me](thomaspaulin.me) automatically.**
 
 Herein you will find the thought process behind this blog site's theme.
 
@@ -70,7 +71,7 @@ The page content will be a central column with the image at some meta informatio
 
 ## Resources
 - [Material Design Colour Palette](https://material.io/resources/color/#!/)
-- [Quantum Break interface inspiration](https://qbinterface.com/)
+- [Quantum Break interface inspiration](http://qbinterface.com/)
 - [Font combination suggestions](https://www.canva.com/font-combinations/)
 - [Futura PT (free for personal use)](https://www.dafontfree.io/futura-pt-font/)
 - [Font contrast checker](https://webaim.org/resources/contrastchecker/)

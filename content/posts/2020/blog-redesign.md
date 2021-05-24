@@ -4,7 +4,7 @@ date: 2020-08-05
 tags: ["blog", "design", "hugo", "themes", "typography"]
 draft: false
 ---
-A personal website should say who you are and much like in a conversation, as personal website is so much more than the text written. My [initial design](https://blog.thomaspaulin.me/2020/02/designing-blog.thomaspaulin.me/) was made to be minimal but has ended up feeling bland and sterile, not reflecting my being at all, nor even the clean minimal look I was hoping for in my head. It is for these reasons that I've chosen to undertake a redesign of my personal website to make it a bit more memorable and whilst unifying the design of the home page, and the blog.
+A personal website should say who you are and much like in a conversation, as personal website is so much more than the text written. My [initial design](https://thomaspaulin.me/2020/02/designing-blog.thomaspaulin.me/) was made to be minimal but has ended up feeling bland and sterile, not reflecting my being at all, nor even the clean minimal look I was hoping for in my head. It is for these reasons that I've chosen to undertake a redesign of my personal website to make it a bit more memorable and whilst unifying the design of the home page, and the blog.
 
 # Part One
 Initially I wanted to keep the minimalist and modern black on white, frosted glass feeling with bold accent colours but as I began researching how I might acheive this look I stumbled on Typography and graphic design articles. These led me to take a more bold paper-cross-conversation type approach by animating bold and concise text at a speed intended to mimic speech.
