@@ -4,6 +4,8 @@ title = "thomaspaulin.me"
 description = "The intersection of aerospace, science, and programming."
 theme = "candy"
 
+enableRobotsTXT = true
+
 [params]
   AuthorName = "Thomas Paulin"
   description = "The intersection of aerospace, science, and programming."
@@ -12,25 +14,26 @@ theme = "candy"
   posts = "/:year/:month/:slug/"
 
 [[menu.main]]
-  name = "Home"
-  identifier = "Home"
-  url = "https://thomaspaulin.me/"
+  name = "Posts"
+  identifier = "posts"
+  url = "/posts/"
   weight = 1
 
 [[menu.main]]
-  name = "Posts"
-  identifier = "Posts"
-  url = "/posts/"
+  name = "Projects"
+  identifier = "github"
+  url = "https://github.com/thomaspaulin"
   weight = 2
 
 [[menu.main]]
-  name = "Projects"
-  identifier = "Github"
-  url = "https://github.com/thomaspaulin"
+  name = "My Impossible List"
+  identifier = "impossible"
+  url = "/2018/04/the-impossible-list/"
   weight = 3
 
 [[menu.main]]
-  name = "My Impossible List"
-  identifier = "Impossible List"
-  url = "https://thomaspaulin.me/2018/04/the-impossible-list/"
+  name = "About Me"
+  identifier = "about"
+  url = "/about/"
   weight = 4
+
