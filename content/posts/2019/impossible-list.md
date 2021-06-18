@@ -69,14 +69,12 @@ It's crucial to note that an Impossible List changes over time and is constantly
 - Create a side business (it can flop)
 - ~~Work overseas for at least 3 months (October 2019)~~
     - ~~Live and work overseas for one year (July 2020)~~
-    - Live and work overseas for two years (JUly 2021)
+    - ~~Live and work overseas for two years (July 2021)~~
 - ~~Find work in Europe (July 2019)~~
-- Accept/create a job in the space sector
+- ~~Accept/create a job in the space sector (July 2020)~~
 
 ## Financial Goals
 - Save $25,000 USD in one year
-- ~~Write and Investor Policy Statement (July 2020)~~
-- Calculate my F.I.R.E number (document the assumptions made)
 
 ## Creative Goals
 - ~~Create and fly a model rocket from a kit (Feb 2018)~~
