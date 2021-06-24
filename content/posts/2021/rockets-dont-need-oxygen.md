@@ -19,4 +19,4 @@ One of the major players within redox chemistry is the oxidising agent, or oxidi
 
 If any molecule which loses its electron(s) can be our oxidiser, what properties make for a good oxidiser? In reality, the decision is a series of compromises where we consider a host of factors depending on the intended use. These factors include: energy released by the reaction, reaction time, freezing point, safety, production, cost, and more. In theory, we seek an oxidising agent that releases as much energy as possible. So in the realm of idealism and hypotheticals, oxygen need not be present.
 
-To learn more about rocket propellant chemistry, I recommend reading Ignition! By John D. Clark.
+To learn more about rocket propellant chemistry, I recommend reading [Ignition! By John D. Clark](https://library.sciencemadness.org/library/books/ignition.pdf).
