@@ -7,7 +7,7 @@ draft: false
 ---
 ## Why Rocket Don’t Need Oxygen
 
-As many articles and videos throughout the internet explain, a rocket moves in accordance with Newton’s third law of motion by ejecting matter, in one direction so that the reaction force produces motion in the opposite.
+As [many](https://www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-is-a-rocket-k4.html) [articles](https://interestingengineering.com/rockets-101-how-exactly-do-rockets-work) and [videos](https://www.youtube.com/watch?v=jI-HeXhsUIg) [throughout](https://www.nasa.gov/stem-ed-resources/how-rockets-work.html) the [internet](https://www.esa.int/kids/en/learn/Technology/Rockets/How_does_a_rocket_work) [explain](https://science.howstuffworks.com/rocket.htm), a rocket moves in accordance with Newton’s third law of motion by ejecting matter, in one direction so that the reaction force produces motion in the opposite.
 
 Rockets combine a fuel with an oxidiser, then combust the mixture to produce hot gases. This exhaust acts as the ejected matter and voila! You have thrust.
 
