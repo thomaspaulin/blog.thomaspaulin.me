@@ -5,7 +5,7 @@ slug: "rockets-dont-need-oxygen"
 tags: ["rocketry", "chemistry"]
 draft: false
 ---
-## Why Rocket Oxidisers Don’t Need Oxygen
+## Why Rocket Don’t Need Oxygen
 
 As many articles and videos throughout the internet explain, a rocket moves in accordance with Newton’s third law of motion by ejecting matter, in one direction so that the reaction force produces motion in the opposite.
 
