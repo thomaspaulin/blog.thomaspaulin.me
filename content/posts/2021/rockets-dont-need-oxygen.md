@@ -1,7 +1,7 @@
 ---
 title: "Oxygen Need Not Be Present"
 date: 2021-06-25
-slug: "rockets-dont-need-oxygen"
+slug: "why-rockets-dont-need-oxygen"
 tags: ["rocketry", "chemistry"]
 draft: false
 ---
