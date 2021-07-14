@@ -14,7 +14,7 @@ It's crucial to note that an Impossible List changes over time and is constantly
 
 # My Impossible List
 ## Current Focus
-- TBD
+- Obtain a job in the space industry
 
 ## Last 5 Completed Items
 - ~~Meditate for at least 10 mins per for 90 days (January 2021)~~
@@ -72,6 +72,7 @@ It's crucial to note that an Impossible List changes over time and is constantly
     - ~~Live and work overseas for two years (July 2021)~~
 - ~~Find work in Europe (July 2019)~~
 - ~~Accept/create a job in the space sector (July 2020)~~
+- Obtain a job in the space industry
 
 ## Financial Goals
 - Save $25,000 USD in one year
@@ -80,6 +81,7 @@ It's crucial to note that an Impossible List changes over time and is constantly
 - ~~Create and fly a model rocket from a kit (Feb 2018)~~
 - ~~Design and create a piece of jewellery for myself, friends, or family (July 2019)~~
     - Create wedding and/or engagement rings for myself and my fiancée
+- ~~Create and release a YouTube video (July 2021)~~
     
 ## Skill Goals
 - Pass a B1 exam in another language
